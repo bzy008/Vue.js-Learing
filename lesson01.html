@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+	<div id="app">
+  		{{ message }}
+  		<div>
+  			<input type="text" v-model="name">
+  			<span>your name:{{name}}</span>
+  		</div>
+  		<div>
+  			<input type="text" v-model="age">
+  			<span>your age:{{age}}</span>
+  		</div>
+  		<div>
+  			<input type="text" v-model="sex">
+  			<span v-show="sex">your sex:{{sex}}</span><!-- v-show可以隐藏 -->
+  		</div>
+	</div>
+
+	<script type="text/javascript">
+		var app = new Vue({
+			el: '#app',
+			data: {
+				message: 'Hello Vue.js World!',
+				name: 'A',
+				age: 18,
+				sex: null
+			}
+		})
+
+	</script>
+</body>
+</html>
