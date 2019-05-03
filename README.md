@@ -9,6 +9,7 @@
       {{ message }}
     </div>
   </body>
+  ...javascript
   <javascript>
     var app = new Vue({
     el: '#app',
