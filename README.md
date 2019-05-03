@@ -1,8 +1,9 @@
 # Vue.js-Learing
 01:
-  开头需要引入<script src="https://cdn.jsdelivr.net/npm/vue"></script>
-  v-model=""：双向绑定
-  v-show="":可以隐藏信息
+  a. 开头需要引入<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  b. v-model=""：双向绑定
+  c. v-show="":可以隐藏信息
+  d. 格式
   <body>
     <div id="app">
       {{ message }}
