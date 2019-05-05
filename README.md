@@ -133,3 +133,8 @@ Lesson10:<br>
 
 Lesson10b:<br>
   a. 父子通信小例子--用户跳转
+  
+  
+Lesson11:<br>
+  a. 子父通信
+  b. $emit(event, args)相当于jquery trigger()方法,需要去了解下
