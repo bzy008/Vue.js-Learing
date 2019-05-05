@@ -62,20 +62,14 @@ Lesson05:<br>
 
 Lesson06:<br>
   a. v-model适用的3个标签<br>
-  b. input
-  c. select
+  b. input<br>
+  c. select<br>
       ```html
-     <dir>
-	<select v-model="dest" multiple="">
-		<option value="1">NYC</option>
-		<option value="2">Boston</option>
-		<option value="3">Shanghai</option>
-		<option value="4">Beijing</option>
-	</select>
-	{{dest}}
-      </dir>
-       ```
-      ctrl可多选，shift可全选
+    <div id="app">
+      {{ message }}
+    </div>
+      ```
+      ctrl可多选，shift可全选<br>
   d. textarea
 
 Lesson07:<br>
