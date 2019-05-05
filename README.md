@@ -80,3 +80,43 @@ Lesson06:<br>
   d. textarea
 
 Lesson07:<br>
+  a. 计算属性computed<br>
+  b. 用function表示
+  ```javascript
+  var app = new Vue ({
+	el: '#app',
+	data: {
+		math: 90,
+		physics: 80,
+		english: 30
+		},
+	computed: {
+		sum: function () {
+			return this.math + this.physics + this.english;
+			},
+			average: function () {
+				return Math.round(this.sum/3);
+			}
+		}
+  });
+  ```
+  
+Lesson08:<br>
+  a.局部组件component
+  b. Vue.component({})
+  ```javascript
+  var alert_component = {
+	template: '<button @click="on_click">TanTanTan</button>',
+	methods: {
+		on_click: function() {
+		alert('hello');
+		}
+	}
+  };
+  new Vue ({
+	el: '#seg1',
+	components: {
+		'alert': alert_component
+		}
+  });
+  ```
