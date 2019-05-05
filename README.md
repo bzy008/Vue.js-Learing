@@ -15,7 +15,7 @@ Lesson01:<br>
     	data: {
     	        message: 'Hello Vue!'
     	}
-  })
+    })
   ```
 Lesson02:<br>
   a. v-for 用于遍历
@@ -53,10 +53,27 @@ Lesson04:<br>
 		}        
   });
   ```
-
-
+  
 Lesson05:<br>
   a. v-model 双向绑定<br>
   b. v-model.trim 消除空格<br>
   c. v-model.lazy 推迟 当输入完才绑定<br>
   d. v-model.number 价格 年龄用于数字表达 转化成数字类型<br>
+
+Lesson06:<br>
+  a. v-model适用的3个标签<br>
+  b. <input></input><br>
+  c. <select></select><br>
+     ```html
+     <dir>
+	<select v-model="dest" multiple="">
+		<option value="1">NYC</option>
+		<option value="2">Boston</option>
+		<option value="3">Shanghai</option>
+		<option value="4">Beijing</option>
+	</select>
+	{{dest}}
+      </dir>
+      ```
+      ctrl可多选，shift可全选
+  d. <textarea></textarea>
