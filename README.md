@@ -136,5 +136,5 @@ Lesson10b:<br>
   
   
 Lesson11:<br>
-  a. 子父通信
+  a. 子父通信<br>
   b. $emit(event, args)相当于jquery trigger()方法,需要去了解下
