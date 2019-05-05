@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<title>lesson03</title>
+	<style type="text/css">
+		.active {
+			background: #a10;
+		}
+	</style>
+</head>
+<body>
+	<div id="app">
+		<a v-bind:class="{active: isActive}" :href="url">click</a> <!-- v-bind可以省略 -->
+	</div>
+	
+
+
+	<script type="text/javascript">
+		var app = new Vue ({
+			el: '#app',
+			data: {
+				url: 'http://baidu.com',
+				klass: 'btn btn-default',
+				isActive: true
+			}
+		});
+	</script>
+</body>
+</html>

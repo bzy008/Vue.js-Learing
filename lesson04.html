@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<title>Document</title>
+</head>
+<body>
+	<div id="app">
+		<button v-on="{mouseenter: onEnter, mouseleave: onOut}" v-on:click="onClick">click</button>
+		<form v-on:keyup.enter="onEnter" @submit.prevent="onSubmit">
+			<input type="text">
+			<button type="submit">submit</button>
+		</form>
+		v-on:可以简化为@
+	</div>
+
+	<script type="text/javascript">
+		var app = new Vue ({
+			el: '#app',
+			methods: {
+ 				onClick: function() {
+ 					console.log('clicked')
+ 				},
+ 				onEnter: function() {
+ 					console.log('mouse enter');
+ 				},
+ 				onOut: function() {
+ 					console.log('mouse leave');
+ 				},
+ 				onSubmit: function() {
+ 					// e.preventDefault();
+ 					console.log('submitted');
+ 				},
+ 				onEnter: function() {
+ 					console.log('Entered');
+ 				}
+			}
+		});
+	</script>
+</body>
+</html>

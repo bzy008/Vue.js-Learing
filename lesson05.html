@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<title>lesson05</title>
+</head>
+<body>
+	<div id="app">
+		<input type="text" v-model="name">
+		{{name}}
+		<input type="text" v-model.number="price">
+		{{price}}
+	</div>
+	.trim 消除空格
+	.lazy 推迟 当输入完才绑定
+	.number 价格 年龄用于数字表达 转化成数字类型
+	<script type="text/javascript">
+		var app = new Vue ({
+			el: '#app',
+			data: {
+				name: 'wang',
+				price: 10
+			}
+		});
+	</script>
+</body>
+</html>

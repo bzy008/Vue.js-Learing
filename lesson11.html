@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<title>lesson11</title>
+</head>
+<body>
+	<div id="app">
+		<balance></balance>
+	</div>
+
+
+	<script type="text/javascript">
+		Vue.component('balance', {
+			template: `
+				<div>
+					<show @show-balance="show_balance"></show>
+					<div v-if="show">
+						您的余额：￥98
+					</div>
+				</div>
+			`,
+			methods: {
+				show_balance: function(data) {
+					this.show = true;
+					console.log('data:', data);
+				}
+			},
+			data: function() {
+				return {
+					show: false,
+				}
+			}
+		});
+
+		Vue.component('show', {
+			template: '<button @click="on_click()">显示余额</button>',
+			methods: {
+				on_click() {
+					this.$emit('show-balance', {a: 1, b: 2});//$emit(event, args)相当于jquery trigger()方法
+				}
+			}
+		});
+
+		new Vue ({
+			el: '#app',
+		})
+	</script>
+</body>
+</html>

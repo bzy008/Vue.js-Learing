@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<title>lesson10b</title>
+</head>
+<body>
+	<div id="app">
+		<user username="whh">whh</user>
+	</div>
+
+
+	<script type="text/javascript">
+		Vue.component('user', {
+			template: '<a :href=" \'/user/\' + username">@{{username}}</a>',
+			props: ['username'],
+			
+		})
+
+		new Vue ({
+			el: '#app',
+		})
+	</script>
+	组件传参
+	由外部向内部传值 
+	父级组件和子级组件通信
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>lesson07</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script><br>
+</head>
+<body>
+	<dir id="app">
+		<table border="1">
+			<thead>
+				<th>学科</th>
+				<th>分数</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>数学</td>
+					<td><input type="text" v-model.number="math"></td>
+				</tr>
+				<tr>
+					<td>物理</td>
+					<td><input type="text" v-model.number="physics"></td>
+				</tr>
+				<tr>
+					<td>英语</td>
+					<td><input type="text" v-model.number="english"></td>
+				</tr>
+				<tr>
+					<td>总分</td>
+					<td>{{sum}}</td>
+				</tr>
+				<tr>
+					<td>平均分</td>
+					<td>{{average}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</dir>
+
+	<script type="text/javascript">
+		var app = new Vue ({
+			el: '#app',
+			data: {
+				math: 90,
+				physics: 80,
+				english: 30
+			},
+			computed: {
+				sum: function () {
+					return this.math + this.physics + this.english;
+				},
+				average: function () {
+					return Math.round(this.sum/3);
+				}
+			}
+		});
+	</script>
+</body>
+</html>

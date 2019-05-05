@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script><br>
+	<title>lesson08</title>
+</head>
+<body>
+	<div id="seg1">
+		<alert></alert>
+	</div>
+	<div id="seg2">
+		<alert></alert>
+	</div>
+
+	<script type="text/javascript">
+		// Vue.component('alert', {
+		// 	template: '<button @click="on_click">TanTanTan</button>',
+		// 	methods: {
+		// 		on_click: function() {
+		// 			alert('hello');
+		// 		}
+		// 	}
+		// })
+		var alert_component = {
+			template: '<button @click="on_click">TanTanTan</button>',
+			methods: {
+				on_click: function() {
+					alert('hello');
+				}
+			}
+		};
+		new Vue ({
+			el: '#seg1',
+			components: {
+				'alert': alert_component
+			}
+		});
+
+		new Vue ({
+			el: '#seg2'
+		});
+	</script>
+</body>
+</html>

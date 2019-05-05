@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>lesson06</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+	<div id="app">
+		<label>
+			男
+			<input type="checkbox" v-model="sex" value="male">
+		</label>
+		<label>
+			女
+			<input type="checkbox" v-model="sex" value="female">
+		</label>
+		<br>
+		{{sex}}
+		<br>
+		<textarea v-model="article"></textarea>
+		<br>
+		<select v-model="from">
+			<option value="1">NYC</option>
+			<option value="2">Boston</option>
+		</select>
+		{{from}}
+		<dir>
+			<select v-model="dest" multiple="">
+				<option value="1">NYC</option>
+				<option value="2">Boston</option>
+				<option value="3">Shanghai</option>
+				<option value="4">Beijing</option>
+			</select>
+			{{dest}}
+		</dir>
+	</div>
+	
+	<script type="text/javascript">
+		var app = new Vue ({
+			el: '#app',
+			data: {
+				sex: ['male'],
+				article: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+				from: 1,
+				dest: []
+			}
+		});
+	</script>
+	
+</body>
+</html>

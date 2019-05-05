@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<title>lesson02</title>
+</head>
+<body>
+	<div id="app">
+		<ul>
+			<li v-for="food in foodList">{{food.name}}:{{food.discount ? food.price * food.discount : food.price}}</li>
+		</ul>
+	</div>
+
+	<script type="text/javascript">
+		var app = new Vue ({
+			el: '#app',
+			data: {
+				foodList: [
+					{
+						name: 'cong',
+						price: 10,
+						discount: .8
+					},
+					{
+						name: 'jiang',
+						price: 5,
+						discount: .5
+					},
+					{
+						name: 'suan',
+						price: 4.5
+					}
+				],
+			}
+		});
+	</script>
+</body>
+</html>
