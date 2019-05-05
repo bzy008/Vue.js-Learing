@@ -79,6 +79,7 @@ Lesson06:<br>
   ctrl可多选，shift可全选<br>
   d. textarea
 
+
 Lesson07:<br>
   a. 计算属性computed<br>
   b. 用function表示
@@ -120,3 +121,15 @@ Lesson08:<br>
 		}
   });
   ```
+
+
+Lesson09:<br>
+  a. 全局组件--点赞按钮
+
+Lesson10:<br>
+  a. 父子通信
+  b. 组件传参,由外部向内部传值,父级组件和子级组件通信
+  c. props: ['msg']
+
+Lesson10b:<br>
+  a. 父子通信小例子--用户跳转
