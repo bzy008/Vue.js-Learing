@@ -62,9 +62,9 @@ Lesson05:<br>
 
 Lesson06:<br>
   a. v-model适用的3个标签<br>
-  b. <input><br>
-  c. <select><br>
-     ```html
+  b. <input>
+  c. <select>
+      ```html
      <dir>
 	<select v-model="dest" multiple="">
 		<option value="1">NYC</option>
@@ -74,6 +74,6 @@ Lesson06:<br>
 	</select>
 	{{dest}}
       </dir>
-      ```
+       ```
       ctrl可多选，shift可全选
   d. <textarea>
