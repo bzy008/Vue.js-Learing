@@ -32,27 +32,9 @@ Lesson04:<br>
   e. v-on 要使用methods
   ```javascript
   var app = new Vue ({
-			el: '#app',
-			methods: {
- 				onClick: function() {
- 					console.log('clicked')
- 				},
- 				onEnter: function() {
- 					console.log('mouse enter');
- 				},
- 				onOut: function() {
- 					console.log('mouse leave');
- 				},
- 				onSubmit: function() {
- 					// e.preventDefault();
- 					console.log('submitted');
- 				},
- 				onEnter: function() {
- 					console.log('Entered');
- 				}
-			}
-		});
-
+  	
+  });
+  ```
 
 
 Lesson05:<br>
