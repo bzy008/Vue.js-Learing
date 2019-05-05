@@ -68,7 +68,7 @@ Lesson06:<br>
     <div id="app">
       {{ message }}
     </div>
-      ```
+      
       ctrl可多选，shift可全选<br>
   d. textarea
 
