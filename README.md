@@ -11,10 +11,10 @@ Lesson01:<br>
   ```
   ```javascript
     var app = new Vue({
-    el: '#app',
-    data: {
-    message: 'Hello Vue!'
-    }
+    	el: '#app',
+    	data: {
+    	        message: 'Hello Vue!'
+    	}
   })
   ```
 Lesson02:<br>
