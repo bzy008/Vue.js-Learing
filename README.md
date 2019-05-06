@@ -138,3 +138,10 @@ Lesson10b:<br>
 Lesson11:<br>
   a. 子父通信<br>
   b. $emit(event, args)相当于jquery trigger()方法,需要去了解下
+
+Lesson12:<br>
+  a. 平行组件间通信
+  
+  
+Lesson13:<br>
+  a. 
