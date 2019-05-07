@@ -144,4 +144,17 @@ Lesson12:<br>
   
   
 Lesson13:<br>
-  a. 
+  a. 过滤器 Vue.filter
+  ```javascript
+  Vue.filter('meter', function(val, unit) {
+	val = val || 0;
+	unit = unit || 'm';
+	return (val / 1000).toFixed(2) + unit;
+  });
+  ```
+  
+Lesson14:<br>
+  a. v-pin 钉住
+  b. Vue.directive
+  
+
