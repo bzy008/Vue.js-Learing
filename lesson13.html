@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<title>lesson13</title>
+</head>
+<body>
+	<div id="app">
+		<div>
+			<input v-model="length"> mm
+			<br>
+			{{length | meter}}
+		</div>
+		<div>
+			<input v-model="price">
+			<br>
+			{{ price | currency('USD')}}
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		Vue.filter('meter', function(val, unit) {
+			val = val || 0;
+			unit = unit || 'm';
+			return (val / 1000).toFixed(2) + unit;
+		});
+
+
+		Vue.filter('currency', function(val, unit) {
+			val = val || 0;
+			unit = unit || 'yuan';
+			return val + unit;
+		});
+
+
+
+		new Vue({
+			el: '#app',
+			data: {
+				price: 10,
+				length: 10
+			}
+		})
+	</script>
+</body>
+</html>

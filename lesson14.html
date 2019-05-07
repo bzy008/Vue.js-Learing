@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>lesson14</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script><br>
+	<style type="text/css">
+		.card {
+			width: 200px;
+			background: #ccc;
+			padding: 10px;
+			margin: 5px;
+		}
+	</style>
+</head>
+<body>
+	<div id="app">
+		<div v-pin:true.bottom.right="card1.pinned" class="card">
+			<button @click="card1.pinned = !card1.pinned">pinned/cancel</button>
+			adadf dwdfaw wdafa wdawdawd, wdfwadwadaw
+		</div>
+			
+		<div v-pin="card2.pinned" class="card">
+			<a @click="card2.pinned = !card2.pinned" href="#">pin it</a>
+			adadf dwdfaw wdafa wdawdawd, wdfwadwadaw
+		</div>
+	</div>
+	<div>
+		aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+		aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+		aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+		aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+		aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+		aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+		aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+		aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+		aaaaaaaaaaa
+		aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+		aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+		aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+		aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+		aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+		aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+		aaaaaaaaaaaaaaaaaaaaaaaaaaaa
+		aaaaaaaaaaaaaaaaaaaaaaaaa
+		aaaaaaaaaaaaaaaaaaaaaaaaaaa
+		aaaaaaaaaaaaaaaaaaaaaaaa
+		aaaaaaaaaaaaaaaaaaaaaaaa
+		aaaaaaaaaaaaaaaaaa
+		aaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+		aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+		aaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+		aaaaaaaaaaaaaaaaaaaaaaaaaaa
+		aaaaaaaaaaaaaaaaaaaaaaaaa
+		aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+		aaaaaaaaaaaaaaaaaaaaaaaa
+		aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+		aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+		aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+		aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+		aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+		aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+			aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+		aaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+		aaaaaaaaaaaaaaaaaaaaaaaaaaa
+		aaaaaaaaaaaaaaaaaaaaaaaaa
+		aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+		aaaaaaaaaaaaaaaaaaaaaaaa
+		aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+		aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+		aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+		aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+		aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+		aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+			aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+		aaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+		aaaaaaaaaaaaaaaaaaaaaaaaaaa
+		aaaaaaaaaaaaaaaaaaaaaaaaa
+		aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+		aaaaaaaaaaaaaaaaaaaaaaaa
+		aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+		aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+		aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+		aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+		aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+		aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+	</div>
+
+
+
+
+	<script type="text/javascript">
+		Vue.directive('pin', function(el, binding) {
+			var pinned = binding.value;
+			var position = binding.modifiers;
+			var warning = binding.arg;
+			if(pinned) {
+				el.style.position = 'fixed';
+
+				for (var key in position) {
+					if(position[key]) {
+						el.style[key] = '10px';
+					}
+				}
+				if (warning === 'true') {
+					el.style.background = 'yellow';
+				}
+			} else {
+				el.style.position = 'static';
+			}
+		})
+
+
+		new Vue({
+			el: '#app',
+			data: {
+				card1: {
+					pinned: false,
+				},
+				card2: {
+					pinned: false,
+				}
+			}
+		})
+	</script>
+</body>
+</html>
