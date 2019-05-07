@@ -156,5 +156,12 @@ Lesson13:<br>
 Lesson14:<br>
   a. v-pin 钉住
   b. Vue.directive
+  c. v-pin.bottom.right 可以改变位置
+  d. v:true => var warning = binding.arg;捕获
   
-
+Lesson15:<br>
+  a. mixins: [base]
+  
+  
+Lesson16:<br>
+  a. 插槽slot
